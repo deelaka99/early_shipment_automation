@@ -1,20 +1,27 @@
 """
 Stage 01 – Order Data Export
 =============================
-Fetches today's unshipped orders from the CA / Rithum REST API and saves them
-to downloads/rithum_orders.csv.
+Fetches unshipped Amazon UK orders due from tomorrow onwards from the CA /
+Rithum REST API and saves them to downloads/rithum_orders.csv.
 
-This replaces the manual "Scheduled Export for early shipping" email workflow
-described in the process guide. Instead of waiting for a Rithum-generated CSV
-attachment, we call the ChannelAdvisor Orders API directly so the data is always
-fresh and the schedule can be controlled independently.
+This replicates the "Mark Orders Shipped Early" saved filter in ChannelAdvisor:
+  - Site Name           equals        Amazon UK
+  - Estimated Ship Date >=            Tomorrow
+  - Shipping Status     in list       Unshipped
+  - Order Tag           not in list   AmazonMerchantPrime
+  - Shipping Class Name not in list   SecondDay
+  - Shipping Class Name not in list   NextDay
+
+The AmazonMerchantPrime tag condition is applied client-side after fetching
+because the CA OData endpoint does not support tag-based filtering.
 
 Steps in this stage
 -------------------
 Step 1.1  Authenticate with the CA REST API
 Step 1.2  Obtain access token
-Step 1.3  Fetch all matching orders for today (paginated)
-Step 1.4  Save orders to downloads/rithum_orders.csv
+Step 1.3  Fetch all matching orders (EstimatedShipDate >= tomorrow, paginated)
+Step 1.4  Exclude AmazonMerchantPrime-tagged orders (client-side)
+Step 1.5  Save orders to downloads/rithum_orders.csv
 
 Required .env keys
 ------------------
@@ -31,7 +38,7 @@ DEBUG               – Set to 1 to enable verbose logging
 Exit codes
 ----------
 0   – Orders fetched and saved successfully
-10  – No orders matched today's filter (nothing to process downstream)
+10  – No orders matched the filter (nothing to process downstream)
 1   – Any other error
 """
 
@@ -54,20 +61,18 @@ NO_ORDERS_EXIT_CODE = 10
 _CA_TOKEN_URL = "https://api.channeladvisor.com/oauth2/token"
 _CA_ORDERS_URL = "https://api.channeladvisor.com/v1/Orders"
 
+# Mirrors the CA saved filter "Mark Orders Shipped Early".
+# EstimatedShipDateUtc >= tomorrow is appended at runtime in run().
 _DEFAULT_ORDER_FILTER = (
-    "ShippingStatus eq 'Unshipped'"
-    " and (SiteName eq 'Amazon UK'"
-    " or SiteName eq 'eBay Fixed Price UK'"
-    " or SiteName eq 'Temu UK')"
+    "SiteName eq 'Amazon UK'"
+    " and ShippingStatus eq 'Unshipped'"
     " and (RequestedShippingClass eq null"
-    " or (RequestedShippingClass ne 'NextDay'"
-    " and RequestedShippingClass ne 'SecondDay'"
-    " and RequestedShippingClass ne 'Prime NextDay'"
-    " and RequestedShippingClass ne 'Prime SecondDay'"
-    " and RequestedShippingClass ne 'Prime Standard'"
-    " and RequestedShippingClass ne 'Premium NextDay'"
-    " and RequestedShippingClass ne 'Premium SecondDay'))"
+    " or (RequestedShippingClass ne 'SecondDay'"
+    " and RequestedShippingClass ne 'NextDay'))"
 )
+
+# Tag excluded by the CA saved filter — applied client-side after fetch.
+_EXCLUDED_TAG = "amazonmerchantprime"
 
 
 # ---------------------------------------------------------------------------
@@ -189,6 +194,20 @@ def _fetch_orders_page(
     return response.json().get("value", [])
 
 
+def _exclude_merchant_prime(orders: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Drop orders tagged AmazonMerchantPrime (client-side mirror of the CA filter)."""
+    filtered = []
+    for order in orders:
+        raw_tags = order.get("Tags") or []
+        tag_names = {
+            str(t.get("Name") if isinstance(t, dict) else t).strip().lower()
+            for t in (raw_tags if isinstance(raw_tags, list) else [])
+        }
+        if _EXCLUDED_TAG not in tag_names:
+            filtered.append(order)
+    return filtered
+
+
 def _utc_to_display_datetime(value: Any) -> str:
     """Convert a CA API UTC timestamp to 'DD/MM/YYYY HH:MM' (Basic Layout format)."""
     if not value:
@@ -256,16 +275,16 @@ def run(config: Config) -> int:
     access_token = _get_access_token(config)
     _log("Stage 1 / Step 1.2: CA API access token obtained")
 
-    today = datetime.date.today()
-    tomorrow = today + datetime.timedelta(days=1)
+    # Early shipment: fetch orders whose estimated ship date is tomorrow or later.
+    tomorrow = datetime.date.today() + datetime.timedelta(days=1)
     filter_expr = (
         config.ca_order_filter
-        + f" and EstimatedShipDateUtc ge {today.isoformat()}T00:00:00Z"
-        + f" and EstimatedShipDateUtc lt {tomorrow.isoformat()}T00:00:00Z"
+        + f" and EstimatedShipDateUtc ge {tomorrow.isoformat()}T00:00:00Z"
     )
     _log_info(config.debug, f"CA API order filter: {filter_expr}")
+    _log(f"Stage 1 / Step 1.3: Fetching orders with EstimatedShipDate >= {tomorrow}")
 
-    all_rows: list[dict[str, Any]] = []
+    all_orders: list[dict[str, Any]] = []
     page_size = 100
     skip = 0
 
@@ -279,26 +298,36 @@ def run(config: Config) -> int:
         )
         if not page:
             break
-        all_rows.extend(_order_to_row(order) for order in page)
+        all_orders.extend(page)
         _log_info(
             config.debug,
-            f"CA API: fetched {len(all_rows)} orders so far (page size {len(page)})",
+            f"CA API: fetched {len(all_orders)} orders so far (page size {len(page)})",
         )
         skip += len(page)
         if len(page) < page_size:
             break
 
-    _log(f"Stage 1 / Step 1.3: Fetched {len(all_rows)} orders from CA REST API for {today}")
+    _log(f"Stage 1 / Step 1.3: Fetched {len(all_orders)} orders from CA REST API")
 
-    if not all_rows:
+    # Apply the AmazonMerchantPrime tag exclusion client-side.
+    before_tag_filter = len(all_orders)
+    all_orders = _exclude_merchant_prime(all_orders)
+    excluded = before_tag_filter - len(all_orders)
+    _log(
+        f"Stage 1 / Step 1.4: Excluded {excluded} AmazonMerchantPrime order(s); "
+        f"{len(all_orders)} order(s) remaining"
+    )
+
+    if not all_orders:
         print(
-            "[WARN] No CA/Rithum orders matched today's filter. "
+            "[WARN] No CA/Rithum orders matched the early shipment filter. "
             "Nothing to process downstream."
         )
         return NO_ORDERS_EXIT_CODE
 
-    _write_csv(config.output_path, all_rows)
-    _log(f"Stage 1 / Step 1.4: Saved {len(all_rows)} orders to {config.output_path}")
+    rows = [_order_to_row(order) for order in all_orders]
+    _write_csv(config.output_path, rows)
+    _log(f"Stage 1 / Step 1.5: Saved {len(rows)} order(s) to {config.output_path}")
     return 0
 
 
