@@ -1,0 +1,866 @@
+{
+  "Evri 24 Non POD": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 24"
+  },
+  "Evri 48": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 48"
+  },
+  "Evri 48 Non POD": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 48"
+  },
+  "Evri Next Day Contract Rate": {
+    "carrier_code": "Evri",
+    "class_code": "Evri Next Day"
+  },
+  "RMCD Tracked 24 (TPN24) - No Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 24"
+  },
+  "RMCD Tracked 48 (TPS48) - No Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "RMCD Tracked 48 (TPS48)- No Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "RMCD Tracked 48 (TPS48)- With Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "RMCD Tracked 24 (TPN24) - With Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 24"
+  },
+  "RMCD Tracked 48 (TPS48) - With Signature": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "RMCD International Business Parcel Tracked Country Priced (MP7)": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Airmail"
+  },
+  "International Business Parcel Tracked DDP (RMP)-2": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Airmail"
+  },
+  "RMCD Royal Mail 48 Small Parcel (CRL48)": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail 48"
+  },
+  "Airmail": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Airmail"
+  },
+  "Cancelled": {
+    "carrier_code": "cancelled",
+    "class_code": "cancelled"
+  },
+  "Amazon Merchants@ Prime Expedited": {
+    "carrier_code": "Amazon Merchants@",
+    "class_code": "Prime Expedited"
+  },
+  "Amazon Merchants@ Prime NextDay": {
+    "carrier_code": "Amazon Merchants@",
+    "class_code": "Prime NextDay"
+  },
+  "Amazon Merchants@ Prime SecondDay": {
+    "carrier_code": "Amazon Merchants@",
+    "class_code": "Prime SecondDay"
+  },
+  "Amazon Merchants@ Prime Standard": {
+    "carrier_code": "Amazon Merchants@",
+    "class_code": "Prime Standard"
+  },
+  "Amazon Shipping One-Day Tracked": {
+    "carrier_code": "AMZSHIPPING",
+    "class_code": "1DAYTRACKED"
+  },
+  "AMZN_DE Expedited": {
+    "carrier_code": "AMZN_DE",
+    "class_code": "Expedited"
+  },
+  "AMZN_DE Standard": {
+    "carrier_code": "AMZN_DE",
+    "class_code": "Standard"
+  },
+  "AMZN_ES Standard": {
+    "carrier_code": "AMZN_ES",
+    "class_code": "Standard"
+  },
+  "AMZN_FR Standard": {
+    "carrier_code": "AMZN_FR",
+    "class_code": "Standard"
+  },
+  "AMZN_IE Expedited": {
+    "carrier_code": "AMZN_IE",
+    "class_code": "Expedited"
+  },
+  "AMZN_IT Standard": {
+    "carrier_code": "AMZN_IT",
+    "class_code": "Standard"
+  },
+  "AMZN_UK Expedited": {
+    "carrier_code": "AMZN_UK",
+    "class_code": "Expedited"
+  },
+  "AMZN_UK Standard": {
+    "carrier_code": "AMZN_UK",
+    "class_code": "Standard"
+  },
+  "AP Expedited": {
+    "carrier_code": "AP",
+    "class_code": "Expedited"
+  },
+  "AP Standard": {
+    "carrier_code": "AP",
+    "class_code": "Standard"
+  },
+  "APGS Standard": {
+    "carrier_code": "APGS",
+    "class_code": "Standard"
+  },
+  "ASENDIA Standard": {
+    "carrier_code": "ASENDIA",
+    "class_code": "Standard"
+  },
+  "ASM Standard": {
+    "carrier_code": "ASM",
+    "class_code": "Standard"
+  },
+  "ATPOST Standard": {
+    "carrier_code": "ATPOST",
+    "class_code": "Standard"
+  },
+  "BigCommerce Standard Shipping (2-5 Days)": {
+    "carrier_code": "BigCommerce",
+    "class_code": "Standard Shipping (2-5 Days)"
+  },
+  "cancelled": {
+    "carrier_code": "cancelled",
+    "class_code": "cancelled"
+  },
+  "CarrierNotSupplied Expedited": {
+    "carrier_code": "CarrierNotSupplied",
+    "class_code": "Expedited"
+  },
+  "CarrierNotSupplied NextDay": {
+    "carrier_code": "CarrierNotSupplied",
+    "class_code": "NextDay"
+  },
+  "CarrierNotSupplied Standard": {
+    "carrier_code": "CarrierNotSupplied",
+    "class_code": "Standard"
+  },
+  "CORREOS Standard": {
+    "carrier_code": "CORREOS",
+    "class_code": "Standard"
+  },
+  "CORREOS_EXPRESS Expedited": {
+    "carrier_code": "CORREOS_EXPRESS",
+    "class_code": "Expedited"
+  },
+  "Customer Pick Up at Sales Location": {
+    "carrier_code": "CPU",
+    "class_code": "CPU"
+  },
+  "DEPOST Standard": {
+    "carrier_code": "DEPOST",
+    "class_code": "Standard"
+  },
+  "DHL DHL Express": {
+    "carrier_code": "DHL",
+    "class_code": "DHL Express"
+  },
+  "DHL Standard": {
+    "carrier_code": "DHL",
+    "class_code": "Standard"
+  },
+  "DHLPL Standard": {
+    "carrier_code": "DHLPL",
+    "class_code": "Standard"
+  },
+  "DP Standard": {
+    "carrier_code": "DP",
+    "class_code": "Standard"
+  },
+  "DPD Expedited": {
+    "carrier_code": "DPD",
+    "class_code": "Expedited"
+  },
+  "DPD Standard": {
+    "carrier_code": "DPD",
+    "class_code": "Standard"
+  },
+  "Evri EVRI 24": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 24"
+  },
+  "Evri EVRI 25": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 25"
+  },
+  "Evri Evri 262": {
+    "carrier_code": "Evri",
+    "class_code": "Evri 262"
+  },
+  "Evri Evri 266": {
+    "carrier_code": "Evri",
+    "class_code": "Evri 266"
+  },
+  "Evri Evri 366": {
+    "carrier_code": "Evri",
+    "class_code": "Evri 366"
+  },
+  "Evri Evri 376": {
+    "carrier_code": "Evri",
+    "class_code": "Evri 376"
+  },
+  "Evri Evri 413": {
+    "carrier_code": "Evri",
+    "class_code": "Evri 413"
+  },
+  "Evri EVRI 48": {
+    "carrier_code": "Evri",
+    "class_code": "EVRI 48"
+  },
+  "Evri Evri Next Day": {
+    "carrier_code": "Evri",
+    "class_code": "Evri Next Day"
+  },
+  "Evri 24 Non POD EVRI 24": {
+    "carrier_code": "Evri 24 Non POD",
+    "class_code": "EVRI 24"
+  },
+  "Fedex Standard": {
+    "carrier_code": "Fedex",
+    "class_code": "Standard"
+  },
+  "GLSIT Standard": {
+    "carrier_code": "GLSIT",
+    "class_code": "Standard"
+  },
+  "HERMES_UK Expedited": {
+    "carrier_code": "HERMES_UK",
+    "class_code": "Expedited"
+  },
+  "HERMES_UK Standard": {
+    "carrier_code": "HERMES_UK",
+    "class_code": "Standard"
+  },
+  "IOMPOST Expedited": {
+    "carrier_code": "IOMPOST",
+    "class_code": "Expedited"
+  },
+  "IPARCEL Expedited": {
+    "carrier_code": "IPARCEL",
+    "class_code": "Expedited"
+  },
+  "IPARCEL Standard": {
+    "carrier_code": "IPARCEL",
+    "class_code": "Standard"
+  },
+  "JERSEY_POST Expedited": {
+    "carrier_code": "JERSEY_POST",
+    "class_code": "Expedited"
+  },
+  "JERSEY_POST Standard": {
+    "carrier_code": "JERSEY_POST",
+    "class_code": "Standard"
+  },
+  "LA_POSTE Expedited": {
+    "carrier_code": "LA_POSTE",
+    "class_code": "Expedited"
+  },
+  "LA_POSTE Standard": {
+    "carrier_code": "LA_POSTE",
+    "class_code": "Standard"
+  },
+  "PAACK Expedited": {
+    "carrier_code": "PAACK",
+    "class_code": "Expedited"
+  },
+  "POSTDK Expedited": {
+    "carrier_code": "POSTDK",
+    "class_code": "Expedited"
+  },
+  "POSTDK Standard": {
+    "carrier_code": "POSTDK",
+    "class_code": "Standard"
+  },
+  "POSTE_ITALIANE Standard": {
+    "carrier_code": "POSTE_ITALIANE",
+    "class_code": "Standard"
+  },
+  "PTLUX Standard": {
+    "carrier_code": "PTLUX",
+    "class_code": "Standard"
+  },
+  "Royal Mai Royal Mail Tracked 48": {
+    "carrier_code": "Royal Mai",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "Royal Mail 1st Class": {
+    "carrier_code": "Royal Mail",
+    "class_code": "1st Class"
+  },
+  "Royal Mail 1st Class Signed For": {
+    "carrier_code": "Royal Mail",
+    "class_code": "1st Class Signed For"
+  },
+  "Royal Mail 2nd Class": {
+    "carrier_code": "Royal Mail",
+    "class_code": "2nd Class"
+  },
+  "Royal Mail 2nd Class Signed For": {
+    "carrier_code": "Royal Mail",
+    "class_code": "2nd Class Signed For"
+  },
+  "Royal Mail Airmail": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Airmail"
+  },
+  "Royal Mail Airsure": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Airsure"
+  },
+  "Royal Mail International Signed-for": {
+    "carrier_code": "Royal Mail",
+    "class_code": "International Signed-for"
+  },
+  "Royal Mail Royal Mail  48": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail  48"
+  },
+  "Royal Mail Royal Mail 1st Class Stamps/Franking": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail 1st Class Stamps/Franking"
+  },
+  "Royal Mail Royal Mail 24": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail 24"
+  },
+  "Royal Mail Royal Mail 48": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail 48"
+  },
+  "Royal Mail Royal Mail Tacked 48": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tacked 48"
+  },
+  "Royal Mail Royal Mail Tracked": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked"
+  },
+  "Royal Mail Royal Mail Tracked 100": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 100"
+  },
+  "Royal Mail Royal Mail Tracked 101": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 101"
+  },
+  "Royal Mail Royal Mail Tracked 102": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 102"
+  },
+  "Royal Mail Royal Mail Tracked 120": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 120"
+  },
+  "Royal Mail Royal Mail Tracked 123": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 123"
+  },
+  "Royal Mail Royal Mail Tracked 126": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 126"
+  },
+  "Royal Mail Royal Mail Tracked 134": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 134"
+  },
+  "Royal Mail Royal Mail Tracked 144": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 144"
+  },
+  "Royal Mail Royal Mail Tracked 168": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 168"
+  },
+  "Royal Mail Royal Mail Tracked 174": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 174"
+  },
+  "Royal Mail Royal Mail Tracked 192": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 192"
+  },
+  "Royal Mail Royal Mail Tracked 216": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 216"
+  },
+  "Royal Mail Royal Mail Tracked 24": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 24"
+  },
+  "Royal Mail Royal Mail Tracked 240": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 240"
+  },
+  "Royal Mail Royal Mail Tracked 264": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 264"
+  },
+  "Royal Mail Royal Mail Tracked 288": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 288"
+  },
+  "Royal Mail Royal Mail Tracked 312": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 312"
+  },
+  "Royal Mail Royal Mail Tracked 336": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 336"
+  },
+  "Royal Mail Royal Mail Tracked 340": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 340"
+  },
+  "Royal Mail Royal Mail Tracked 360": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 360"
+  },
+  "Royal Mail Royal Mail Tracked 384": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 384"
+  },
+  "Royal Mail Royal Mail Tracked 392": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 392"
+  },
+  "Royal Mail Royal Mail Tracked 461": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 461"
+  },
+  "Royal Mail Royal Mail Tracked 48": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 48"
+  },
+  "Royal Mail Royal Mail Tracked 49": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 49"
+  },
+  "Royal Mail Royal Mail Tracked 50": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 50"
+  },
+  "Royal Mail Royal Mail Tracked 51": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 51"
+  },
+  "Royal Mail Royal Mail Tracked 52": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 52"
+  },
+  "Royal Mail Royal Mail Tracked 53": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 53"
+  },
+  "Royal Mail Royal Mail Tracked 54": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 54"
+  },
+  "Royal Mail Royal Mail Tracked 55": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 55"
+  },
+  "Royal Mail Royal Mail Tracked 56": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 56"
+  },
+  "Royal Mail Royal Mail Tracked 57": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 57"
+  },
+  "Royal Mail Royal Mail Tracked 58": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 58"
+  },
+  "Royal Mail Royal Mail Tracked 59": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 59"
+  },
+  "Royal Mail Royal Mail Tracked 60": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 60"
+  },
+  "Royal Mail Royal Mail Tracked 61": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 61"
+  },
+  "Royal Mail Royal Mail Tracked 62": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 62"
+  },
+  "Royal Mail Royal Mail Tracked 63": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 63"
+  },
+  "Royal Mail Royal Mail Tracked 64": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 64"
+  },
+  "Royal Mail Royal Mail Tracked 65": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 65"
+  },
+  "Royal Mail Royal Mail Tracked 66": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 66"
+  },
+  "Royal Mail Royal Mail Tracked 67": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 67"
+  },
+  "Royal Mail Royal Mail Tracked 68": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 68"
+  },
+  "Royal Mail Royal Mail Tracked 69": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 69"
+  },
+  "Royal Mail Royal Mail Tracked 70": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 70"
+  },
+  "Royal Mail Royal Mail Tracked 71": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 71"
+  },
+  "Royal Mail Royal Mail Tracked 72": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 72"
+  },
+  "Royal Mail Royal Mail Tracked 73": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 73"
+  },
+  "Royal Mail Royal Mail Tracked 74": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 74"
+  },
+  "Royal Mail Royal Mail Tracked 75": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 75"
+  },
+  "Royal Mail Royal Mail Tracked 76": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 76"
+  },
+  "Royal Mail Royal Mail Tracked 77": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 77"
+  },
+  "Royal Mail Royal Mail Tracked 78": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 78"
+  },
+  "Royal Mail Royal Mail Tracked 79": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 79"
+  },
+  "Royal Mail Royal Mail Tracked 80": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 80"
+  },
+  "Royal Mail Royal Mail Tracked 81": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 81"
+  },
+  "Royal Mail Royal Mail Tracked 82": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 82"
+  },
+  "Royal Mail Royal Mail Tracked 83": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 83"
+  },
+  "Royal Mail Royal Mail Tracked 84": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 84"
+  },
+  "Royal Mail Royal Mail Tracked 85": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 85"
+  },
+  "Royal Mail Royal Mail Tracked 86": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 86"
+  },
+  "Royal Mail Royal Mail Tracked 87": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 87"
+  },
+  "Royal Mail Royal Mail Tracked 88": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 88"
+  },
+  "Royal Mail Royal Mail Tracked 89": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 89"
+  },
+  "Royal Mail Royal Mail Tracked 90": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 90"
+  },
+  "Royal Mail Royal Mail Tracked 91": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 91"
+  },
+  "Royal Mail Royal Mail Tracked 92": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 92"
+  },
+  "Royal Mail Royal Mail Tracked 93": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 93"
+  },
+  "Royal Mail Royal Mail Tracked 94": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 94"
+  },
+  "Royal Mail Royal Mail Tracked 95": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 95"
+  },
+  "Royal Mail Royal Mail Tracked 96": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 96"
+  },
+  "Royal Mail Royal Mail Tracked 97": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 97"
+  },
+  "Royal Mail Royal Mail Tracked 98": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 98"
+  },
+  "Royal Mail Royal Mail Tracked 99": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Royal Mail Tracked 99"
+  },
+  "Royal Mail Special Delivery": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Special Delivery"
+  },
+  "Royal Mail Standard": {
+    "carrier_code": "Royal Mail",
+    "class_code": "Standard"
+  },
+  "Royal Mail Second Class": {
+    "carrier_code": "Royal Mail Second Class",
+    "class_code": "Royal Mail Second Class"
+  },
+  "ROYAL_MAIL Expedited": {
+    "carrier_code": "ROYAL_MAIL",
+    "class_code": "Expedited"
+  },
+  "ROYAL_MAIL Standard": {
+    "carrier_code": "ROYAL_MAIL",
+    "class_code": "Standard"
+  },
+  "SDA Standard": {
+    "carrier_code": "SDA",
+    "class_code": "Standard"
+  },
+  "SEUR Standard": {
+    "carrier_code": "SEUR",
+    "class_code": "Standard"
+  },
+  "Shopify -": {
+    "carrier_code": "Shopify",
+    "class_code": "-"
+  },
+  "Shopify 48 Hour Tracked": {
+    "carrier_code": "Shopify",
+    "class_code": "48 Hour Tracked"
+  },
+  "Shopify Custom": {
+    "carrier_code": "Shopify",
+    "class_code": "Custom"
+  },
+  "Shopify Europe Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Europe Shipping"
+  },
+  "Shopify Free": {
+    "carrier_code": "Shopify",
+    "class_code": "Free"
+  },
+  "Shopify Free Delivery": {
+    "carrier_code": "Shopify",
+    "class_code": "Free Delivery"
+  },
+  "Shopify Free Delivery FDL": {
+    "carrier_code": "Shopify",
+    "class_code": "Free Delivery FDL"
+  },
+  "Shopify Free delivery Royal Mail tracked 24": {
+    "carrier_code": "Shopify",
+    "class_code": "Free delivery Royal Mail tracked 24"
+  },
+  "Shopify Free shipping Royal mail tracked 24": {
+    "carrier_code": "Shopify",
+    "class_code": "Free shipping Royal mail tracked 24"
+  },
+  "Shopify International Delivery": {
+    "carrier_code": "Shopify",
+    "class_code": "International Delivery"
+  },
+  "Shopify Next Working Day Delivery": {
+    "carrier_code": "Shopify",
+    "class_code": "Next Working Day Delivery"
+  },
+  "Shopify Next Working Day Delivery and Royal mail tracked 4": {
+    "carrier_code": "Shopify",
+    "class_code": "Next Working Day Delivery and Royal mail tracked 4"
+  },
+  "Shopify Next Working Day Delivery DPD": {
+    "carrier_code": "Shopify",
+    "class_code": "Next Working Day Delivery DPD"
+  },
+  "Shopify Packet - EU": {
+    "carrier_code": "Shopify",
+    "class_code": "Packet - EU"
+  },
+  "Shopify Packet - International": {
+    "carrier_code": "Shopify",
+    "class_code": "Packet - International"
+  },
+  "Shopify Packet - UK": {
+    "carrier_code": "Shopify",
+    "class_code": "Packet - UK"
+  },
+  "Shopify RIO Standard Shipping - 24 to 48 hours": {
+    "carrier_code": "Shopify",
+    "class_code": "RIO Standard Shipping - 24 to 48 hours"
+  },
+  "Shopify Royal Mail tracked 24": {
+    "carrier_code": "Shopify",
+    "class_code": "Royal Mail tracked 24"
+  },
+  "Shopify Royal mail tracked 48": {
+    "carrier_code": "Shopify",
+    "class_code": "Royal mail tracked 48"
+  },
+  "Shopify Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Shipping"
+  },
+  "Shopify Shipping fee": {
+    "carrier_code": "Shopify",
+    "class_code": "Shipping fee"
+  },
+  "Shopify Standard": {
+    "carrier_code": "Shopify",
+    "class_code": "Standard"
+  },
+  "Shopify Standard Delivery": {
+    "carrier_code": "Shopify",
+    "class_code": "Standard Delivery"
+  },
+  "Shopify Standard Delivery FDL": {
+    "carrier_code": "Shopify",
+    "class_code": "Standard Delivery FDL"
+  },
+  "Shopify Standard Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Standard Shipping"
+  },
+  "Shopify Track 48": {
+    "carrier_code": "Shopify",
+    "class_code": "Track 48"
+  },
+  "Shopify Tracked 24": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 24"
+  },
+  "Shopify Tracked 24 hour": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 24 hour"
+  },
+  "Shopify Tracked 24 Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 24 Shipping"
+  },
+  "Shopify Tracked 48": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 48"
+  },
+  "Shopify Tracked 48 hour": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 48 hour"
+  },
+  "Shopify Tracked 48 Hour Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 48 Hour Shipping"
+  },
+  "Shopify Tracked 48 Shipping": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked 48 Shipping"
+  },
+  "Shopify Tracked Royal Mail 48 Hours": {
+    "carrier_code": "Shopify",
+    "class_code": "Tracked Royal Mail 48 Hours"
+  },
+  "SMITHS_NEWS Expedited": {
+    "carrier_code": "SMITHS_NEWS",
+    "class_code": "Expedited"
+  },
+  "SMITHS_NEWS Standard": {
+    "carrier_code": "SMITHS_NEWS",
+    "class_code": "Standard"
+  },
+  "Standard": {
+    "carrier_code": "Standard",
+    "class_code": "Standard"
+  },
+  "TAXIPOST Expedited": {
+    "carrier_code": "TAXIPOST",
+    "class_code": "Expedited"
+  },
+  "TAXIPOST Standard": {
+    "carrier_code": "TAXIPOST",
+    "class_code": "Standard"
+  },
+  "TNT Express": {
+    "carrier_code": "TNT",
+    "class_code": "Express"
+  },
+  "TNT Standard": {
+    "carrier_code": "TNT",
+    "class_code": "Standard"
+  },
+  "TNTFR Expedited": {
+    "carrier_code": "TNTFR",
+    "class_code": "Expedited"
+  },
+  "TNTNL Expedited": {
+    "carrier_code": "TNTNL",
+    "class_code": "Expedited"
+  },
+  "TNTNL Standard": {
+    "carrier_code": "TNTNL",
+    "class_code": "Standard"
+  },
+  "UPS Standard": {
+    "carrier_code": "UPS",
+    "class_code": "STD"
+  }
+}
